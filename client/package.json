@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "cd ../server && npm i && cd ..",
-    "postbuild": "cd ../server && npm run dev"
+    "postpublish": "cd ../server && npm run dev"
     
   },
   "dependencies": {
