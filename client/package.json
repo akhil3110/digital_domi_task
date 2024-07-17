@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "cd ../server && npm i && npm run dev"
+    "postinstall": "cd ../server && npm i && cd ..",
+    "postbuild": "cd ../server && npm run dev"
+    
   },
   "dependencies": {
     "@clerk/nextjs": "^5.2.3",
