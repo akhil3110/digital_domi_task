@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="flex justify-between">
             <div>
               <h1 
-                className="text-xl font-bold cursor-pointer"
+                className=" text-lg font-bold cursor-pointer"
                 onClick={() =>{
                   updateDetails({isLoading: false, isDeatailsAvailable: false});
                   return router.push("/")
@@ -41,7 +41,6 @@ const Navbar = () => {
                     return router.push("/History")
                 }}
               >
-                <History  className="mt-1"/>
                 <h3 className="text-xl font-bold">History</h3>
               </div>
               <div className="flex gap-x-1">

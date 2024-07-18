@@ -56,7 +56,7 @@ const History = () => {
                         <h3 className="text-xl font-semibold text-center">
                             Here you can see all the history of the text extracted from images
                         </h3>
-                        <h2 className="text-lg text-center">
+                        <h2 className="text-sm md:text-lg text-center">
                             ( Click On the card to see whole details )
                         </h2>
                     </div>
@@ -93,12 +93,12 @@ const History = () => {
                                                     return router.push(`/History/${item._id}`)
                                                 }}
                                             >
-                                                <div className="flex gap-x-5 w-full">
+                                                <div className="flex gap-x-5 justify-around">
                                                     <div className="w-[50%]">
-                                                        <img src={item.imageUrl} className="h-56 w-full" />
+                                                        <img src={item.imageUrl} className=" h-48 w-full" />
                                                     </div>
                                                     <div>
-                                                        <h2 className="text-lg font-semibold">{first50Words(item.description)}...</h2>
+                                                        <h2 className=" sm:flex text-lg font-semibold">{first50Words(item.description)}...</h2>
                                                     </div>
                                                 </div>
                                             </div>
