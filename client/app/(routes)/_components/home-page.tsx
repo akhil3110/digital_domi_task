@@ -49,7 +49,7 @@ const HomePage = ({
                     </div>
                 </>
             )}
-            {AvailabeDetails?.isDeatailsAvailable && (
+            {AvailabeDetails?.isDeatailsAvailable && !AvailabeDetails?.isLoading && (
                 <motion.div
                 className="box"
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -97,7 +97,18 @@ const HomePage = ({
                 </motion.div>
             )}
             {
-                AvailabeDetails?.isLoading && <p>Loading...</p>
+                AvailabeDetails?.isLoading &&  (
+                    <div className=" flex justify-center mt-5">
+                        <div className=" flex flex-col gap-y-2">
+                            <div className=" flex justify-center">
+                                <div className="animate-spin rounded-full h-24 w-32 border-t-2 border-b-2 border-red-500"></div>
+                            </div>
+                            <div className="text-lg text-center">
+                                Loading...
+                            </div>
+                        </div>
+                    </div>
+                )
             }
         </div>
      );
