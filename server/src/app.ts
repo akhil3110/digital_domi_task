@@ -15,6 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // using routes
+app.use("/", (req, res) => {
+    res.send("Welcome to Image Description API");
+})
 app.use("/api/imagedescription", imageDescriptonRoutes);
 
 
