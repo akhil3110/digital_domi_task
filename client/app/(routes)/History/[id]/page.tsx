@@ -19,7 +19,7 @@ const ImageDescriptionIdPage = (
 
         const getData = async () =>{
             try {
-                const response = await axios.get(`http://localhost:4000/api/imagedescription/getbyId?id=${params.id}`).catch(
+                const response = await axios.get(`https://digital-domi-backend.vercel.app/api/imagedescription/getbyId?id=${params.id}`).catch(
                     () =>{
                         return router.push('/');
                     }

@@ -30,7 +30,7 @@ const History = () => {
             if(!AvailabeDetails?.userId) {
                 return router.push("/")
             }
-            const response = await axios.get(`http://localhost:4000/api/imagedescription/get-All?userId=${AvailabeDetails?.userId}`);
+            const response = await axios.get(`https://digital-domi-backend.vercel.app/api/imagedescription/get-All?userId=${AvailabeDetails?.userId}`);
             console.log(response.data.data);
             setHistory(response.data.data);
            } catch (error) {
@@ -74,7 +74,7 @@ const History = () => {
                                                     className="bg-red-800 hover:bg-red-600 p-2 rounded-lg"
                                                     onClick={async () => {
                                                         try {
-                                                            const response = await axios.delete(`http://localhost:4000/api/imagedescription/delete?id=${item._id}`);
+                                                            const response = await axios.delete(`https://digital-domi-backend.vercel.app/api/imagedescription/delete?id=${item._id}`);
                                                             if(response.status === 200) {
                                                                 toast.success("Deleted Successfully");
                                                                 setHistory(history.filter((historyItem) => historyItem._id !== item._id));

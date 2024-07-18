@@ -44,7 +44,7 @@ const ImageUpload = ({
                         description: ret.data.text
                     }
 
-                    const response = await axios.post('http://localhost:4000/api/imagedescription/add', data).then(() => {
+                    const response = await axios.post('https://digital-domi-backend.vercel.app/api/imagedescription/add', data).then(() => {
                         toast.success("Image details extracted successfully");
                     });
 
