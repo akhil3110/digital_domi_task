@@ -4,7 +4,7 @@ import cors from 'cors';
 import imageDescriptonRoutes from './routes/ImageDescription.js';
 import { connectDb } from './utils/db.js';
 
-const port = 4000;
+const port = 3000;
 
 connectDb();
 const app = express();
