@@ -28,7 +28,24 @@ const HomePage = ({
 
     return ( 
         <div className=" mt-16 ">
-            {!AvailabeDetails?.isDeatailsAvailable && (
+            {
+                AvailabeDetails?.isLoading && 
+                 (
+                    <div>
+                        <div className=" flex flex-wrap justify-center">
+                        <div className=" flex flex-col gap-y-2">
+                            <div className=" flex justify-center">
+                                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-red-800"></div>
+                            </div>
+                            <div className="text-lg text-center">
+                                Loading...
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                )
+            }
+            {!AvailabeDetails?.isDeatailsAvailable && !AvailabeDetails?.isLoading &&  (
                 <>
                     <div className="flex justify-center">
                         <div className="flex flex-col text-center gap-y-3">
@@ -96,20 +113,6 @@ const HomePage = ({
                     </div>
                 </motion.div>
             )}
-            {
-                AvailabeDetails?.isLoading &&  (
-                    <div className=" flex justify-center mt-5">
-                        <div className=" flex flex-col gap-y-2">
-                            <div className=" flex justify-center">
-                                <div className="animate-spin rounded-full h-24 w-32 border-t-2 border-b-2 border-red-500"></div>
-                            </div>
-                            <div className="text-lg text-center">
-                                Loading...
-                            </div>
-                        </div>
-                    </div>
-                )
-            }
         </div>
      );
 }
